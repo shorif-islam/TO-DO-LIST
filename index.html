@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do List</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- fontwesome icon -->
+    <script
+      src="https://kit.fontawesome.com/95052e8c4e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- link css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="flex flex-col gap-8 justify-center items-center h-[100vh] px-4 bg-sky-200"
+  >
+    <div class="md:w-[60%] w-[80%] mx-auto bg rounded-xl p-2 mt-8 mainDiv">
+      <!-- title -->
+      <h1
+        class="text-center text-3xl md:text-5xl mt-9 font-bold border-b-2 border-sky-400 rounded-xl pb-3"
+      >
+        To-Do list
+      </h1>
+      <!-- count -->
+      <div>
+        <p
+          class="text-center text-[20px] mt-4 text-white text-shadow flex justify-center md:flex-row flex-col md:gap-4"
+        >
+          Total : <span id="totalCount" class="text-[25px]"> 0 </span> complete
+          : <span id="completeCount" class="text-[25px]"> 0 </span> pending :
+          <span id="pendingCount" class="text-[25px]"> 0 </span>
+        </p>
+      </div>
+      <!-- input -->
+      <div class="flex justify-center items-center mt-7 py-7">
+        <form
+          id="task-form"
+          class="flex md:flex-row flex-col gap-3 justify-center"
+        >
+          <input
+            type="text"
+            placeholder="Add your task..."
+            class="md:px-8 md:py-3 px-4 py-2 rounded-lg focus:outline-none focus:shadow-inner focus:shadow-slate-400 capitalize -mx-3 hover:border-2 hover:border-red-300 focus:border-2 focus:border-red-300 font-mono capitalize"
+            id="textInput"
+          />
+
+          <button
+            type="button"
+            id="addTask"
+            class="bg-sky-500 py-2 px-6 rounded-lg text-white md:mx-0 mx-4 hover:bg-sky-600 transition-all hover:scale-105"
+          >
+            add task
+          </button>
+        </form>
+      </div>
+      <!-- details -->
+
+      <!-- show details -->
+      <ul id="list" class="rounded px-8 mb-4"></ul>
+    </div>
+
+    <!-- js link -->
+    <script src="index.js"></script>
+  </body>
+</html>
